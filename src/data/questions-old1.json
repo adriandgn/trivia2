@@ -1,0 +1,561 @@
+const questions = [
+    {
+        "verb": "anfangen",
+        "prepositions": [
+            "mit"
+        ],
+        "example": "Ich fange mit der Arbeit an",
+        "translation": "Comenzar"
+    },
+    {
+        "verb": "angst",
+        "prepositions": [
+            "vor"
+        ],
+        "example": "Sie hat Angst vor der Dunkelheit.",
+        "translation": "Miedo"
+    },
+    {
+        "verb": "anstoßen",
+        "prepositions": [
+            "auf"
+        ],
+        "example": "Wir stoßen auf den Erfolg an.",
+        "translation": "Brindar por"
+    },
+    {
+        "verb": "Aufhören",
+        "prepositions": [
+            "mit"
+        ],
+        "example": "Wir hören mit der Arbeit auf.",
+        "translation": "Terminar"
+    },
+    {
+        "verb": "ausruhen",
+        "prepositions": [
+            "von"
+        ],
+        "example": "Sie ruht sich von der Arbeit aus.",
+        "translation": "Descansar"
+    },
+    {
+        "verb": "beginnen",
+        "prepositions": [
+            "mit"
+        ],
+        "example": "Ich beginne mit dem neuen Projekt",
+        "translation": "Comenzar"
+    },
+    {
+        "verb": "Berichten",
+        "prepositions": [
+            "über"
+        ],
+        "example": "Sie berichtet über das neue Projekt.",
+        "translation": "Informar"
+    },
+    {
+        "verb": "denken",
+        "prepositions": [
+            "an"
+        ],
+        "example": "Sie denkt an ihren Freund",
+        "translation": "Pensar"
+    },
+    {
+        "verb": "diskutieren",
+        "prepositions": [
+            "über",
+            "mit"
+        ],
+        "example": "Sie diskutieren über das Thema mit ihm.",
+        "translation": "Discutirr"
+    },
+    {
+        "verb": "einladen",
+        "prepositions": [
+            "zu"
+        ],
+        "example": "Ich lade dich zu meiner Party ein.",
+        "translation": "Invitar"
+    },
+    {
+        "verb": "erzählen",
+        "prepositions": [
+            "von"
+        ],
+        "example": "Sie erzählt von ihrer Reise.",
+        "translation": "Contar"
+    },
+    {
+        "verb": "fliegen",
+        "prepositions": [
+            "auf"
+        ],
+        "example": "Die Vögel fliegen auf das Dach.",
+        "translation": "Volar"
+    },
+    {
+        "verb": "fliehen",
+        "prepositions": [
+            "vor"
+        ],
+        "example": "Der Dieb flieht vor der Polizei.",
+        "translation": "Huir"
+    },
+    {
+        "verb": "fragen",
+        "prepositions": [
+            "nach"
+        ],
+        "example": "Er fragt nach dem Weg zum Bahnhof.",
+        "translation": "preguntar"
+    },
+    {
+        "verb": "helfe",
+        "prepositions": [
+            "bei"
+        ],
+        "example": "Er hilft bei den Hausaufgaben.",
+        "translation": "Ayudar"
+    },
+    {
+        "verb": "hoffen",
+        "prepositions": [
+            "auf"
+        ],
+        "example": "Wir hoffen auf gutes Wetter am Wochenende.",
+        "translation": "Esperar (esperanza)"
+    },
+    {
+        "verb": "kämpfen",
+        "prepositions": [
+            "für",
+            "gegen"
+        ],
+        "example": "Er kämpft für seine Rechte",
+        "translation": "Luchar"
+    },
+    {
+        "verb": "lagen",
+        "prepositions": [
+            "über"
+        ],
+        "example": "Wir lachen über den Witz.",
+        "translation": "Reir"
+    },
+    {
+        "verb": "leiden",
+        "prepositions": [
+            "an"
+        ],
+        "example": "Er leidet an einer Erkältung",
+        "translation": "Sufirir"
+    },
+    {
+        "verb": "Protestieren",
+        "prepositions": [
+            "gegen"
+        ],
+        "example": "Die Schüler protestieren gegen die neuen Regeln.",
+        "translation": "Protestar"
+    },
+    {
+        "verb": "Reagieren",
+        "prepositions": [
+            "auf"
+        ],
+        "example": "Er reagiert auf die Frage.",
+        "translation": "Reaccionar"
+    },
+    {
+        "verb": "riechen",
+        "prepositions": [
+            "nach"
+        ],
+        "example": "Das Essen riecht nach Knoblauch.",
+        "translation": "Oler a"
+    },
+    {
+        "verb": "schreiben",
+        "prepositions": [
+            "über"
+        ],
+        "example": "Ich schreibe über das neue Buch",
+        "translation": "Escribir"
+    },
+    {
+        "verb": "schützen",
+        "prepositions": [
+            "vor"
+        ],
+        "example": "Die Sonnencreme schützt vor Sonnenbrand.",
+        "translation": "Protejer"
+    },
+    {
+        "verb": "sich ängern",
+        "prepositions": [
+            "über"
+        ],
+        "example": "Ich ärgere mich über die Verspätung.",
+        "translation": "Me enojo..."
+    },
+    {
+        "verb": "sich anmelden",
+        "prepositions": [
+            "für"
+        ],
+        "example": "Ich melde mich für das Spiel an.",
+        "translation": "Me registro..."
+    },
+    {
+        "verb": "sich ausgeben",
+        "prepositions": [
+            "als/für"
+        ],
+        "example": "Er gibt sich als Arzt aus.",
+        "translation": "Me hago pasar..."
+    },
+    {
+        "verb": "sich bedanken",
+        "prepositions": [
+            "für",
+            "bei"
+        ],
+        "example": "Ich bedanke mich für das Geschenk bei meiner Kollegin.",
+        "translation": "Agradezco..."
+    },
+    {
+        "verb": "sich beeilen",
+        "prepositions": [
+            "zu"
+        ],
+        "example": "Ich beeile mich zu dem Termin.",
+        "translation": "Me apresuro..."
+    },
+    {
+        "verb": "sich begrüßen",
+        "prepositions": [
+            "bei"
+        ],
+        "example": "Ich begrüße mich bei der Veranstaltung.",
+        "translation": "Saludo ..."
+    },
+    {
+        "verb": "sich beschäftigen",
+        "prepositions": [
+            "mit"
+        ],
+        "example": "Sie beschäftigt sich mit ihrer Hausarbeit.",
+        "translation": "Ocuparse de"
+    },
+    {
+        "verb": "sich beschweren",
+        "prepositions": [
+            "über",
+            "bei"
+        ],
+        "example": "Ich beschwere mich über das Essen bei dem Kellner.",
+        "translation": "Me quejo..."
+    },
+    {
+        "verb": "sich bewerben",
+        "prepositions": [
+            "um",
+            "über",
+            "bei"
+        ],
+        "example": "Ich bewerbe mich um eine Stelle bei der Polizei.",
+        "translation": "Aplico..."
+    },
+    {
+        "verb": "sich enshuldigen",
+        "prepositions": [
+            "für",
+            "bei"
+        ],
+        "example": "Ich entschuldige mich für das Geschenk bei meiner Kollegin.",
+        "translation": "Me disculpo..."
+    },
+    {
+        "verb": "sich entscheiden",
+        "prepositions": [
+            "für",
+            "gegen"
+        ],
+        "example": "Sie entscheidet sich für den Kuchen und gegen das Eis.",
+        "translation": "Decidirse"
+    },
+    {
+        "verb": "sich entspannen",
+        "prepositions": [
+            "von"
+        ],
+        "example": "Ich entspanne mich von der Arbeit.",
+        "translation": "Me relajo..."
+    },
+    {
+        "verb": "sich erinnern",
+        "prepositions": [
+            "an"
+        ],
+        "example": "Ich erinnere mich an die schönen Momente in meiner Kindheit.",
+        "translation": "Me acuerdo.."
+    },
+    {
+        "verb": "sich erkälter",
+        "prepositions": [
+            "bei"
+        ],
+        "example": "Ich erkälte mich bei kaltem Wetter.",
+        "translation": "Me resfrío..."
+    },
+    {
+        "verb": "sich erkundigen",
+        "prepositions": [
+            "nach",
+            "bei"
+        ],
+        "example": "Ich erkundige mich nach den Öffnungszeiten bei der Rezeption.",
+        "translation": "informarse, preguntar"
+    },
+    {
+        "verb": "sich freuen",
+        "prepositions": [
+            "auf",
+            "über"
+        ],
+        "example": "Ich freue mich auf das Geschenk.",
+        "translation": "Me alegro.."
+    },
+    {
+        "verb": "sich fürchten",
+        "prepositions": [
+            "vor"
+        ],
+        "example": "Er fürchtet sich vor Spinnen.",
+        "translation": "Temer"
+    },
+    {
+        "verb": "sich gewöhnen",
+        "prepositions": [
+            "an"
+        ],
+        "example": "Ich habe mich an das kalte Wetter gewöhnt.",
+        "translation": "Acostumbrarse"
+    },
+    {
+        "verb": "sich halten",
+        "prepositions": [
+            "an"
+        ],
+        "example": "Sie hält sich an die Regeln.",
+        "translation": "Se atiene..."
+    },
+    {
+        "verb": "sich informieren",
+        "prepositions": [
+            "über",
+            "bei"
+        ],
+        "example": "Ich informiere mich über die neuen Regeln bei der Verwaltung.",
+        "translation": "informarse"
+    },
+    {
+        "verb": "sich integrieren",
+        "prepositions": [
+            "in"
+        ],
+        "example": "Sie integriert sich in die neue Gemeinschaft",
+        "translation": "Me integro..."
+    },
+    {
+        "verb": "sich interessieren",
+        "prepositions": [
+            "für"
+        ],
+        "example": "Ich interessiere mich für den Tisch.",
+        "translation": "Me interesa..."
+    },
+    {
+        "verb": "sich kämmen",
+        "prepositions": [
+            "mit"
+        ],
+        "example": "Ich kämme mich mit einem Kamm.",
+        "translation": "Me peino..."
+    },
+    {
+        "verb": "sich konzentrieren",
+        "prepositions": [
+            "auf"
+        ],
+        "example": "Ich konzentriere mich auf das Spiel.",
+        "translation": "Me concentro..."
+    },
+    {
+        "verb": "sich kümmern",
+        "prepositions": [
+            "um"
+        ],
+        "example": "Ich kümmere mich um den Garten",
+        "translation": "Me ocupo"
+    },
+    {
+        "verb": "sich langweilen",
+        "prepositions": [
+            "bei"
+        ],
+        "example": "Sie langweilt sich bei der Arbeit",
+        "translation": "Me aburro.."
+    },
+    {
+        "verb": "sich schminken",
+        "prepositions": [
+            "für"
+        ],
+        "example": "Ich schminke mich für den Abend.",
+        "translation": "Me maquillo..."
+    },
+    {
+        "verb": "sich sonnen",
+        "prepositions": [
+            "am"
+        ],
+        "example": "Er sonnt sich am Strand.",
+        "translation": "Asolearse"
+    },
+    {
+        "verb": "sich streiten",
+        "prepositions": [
+            "über",
+            "mit"
+        ],
+        "example": "Ich streite mich über den Putzplan mit meinem Mitbewohner.",
+        "translation": "Me peleo..."
+    },
+    {
+        "verb": "sich treffen",
+        "prepositions": [
+            "mit"
+        ],
+        "example": "Ich treffe mich mit meinem Mitbewohner.",
+        "translation": "Me encuentro..."
+    },
+    {
+        "verb": "sich unterhalter",
+        "prepositions": [
+            "über",
+            "mit"
+        ],
+        "example": "Ich unterhalte mich über den Film mit Antony.",
+        "translation": "Converso..."
+    },
+    {
+        "verb": "sich verabreden",
+        "prepositions": [
+            "mit"
+        ],
+        "example": "Ich verabrede mich mit meinen Freunden im Café.",
+        "translation": "Agendarse"
+    },
+    {
+        "verb": "sich verlieben",
+        "prepositions": [
+            "in"
+        ],
+        "example": "Ich verliebe mich in eine neue Person.",
+        "translation": "Me enamoro..."
+    },
+    {
+        "verb": "sich verrspäten",
+        "prepositions": [
+            "um"
+        ],
+        "example": "Er verspätet sich um eine Stunde",
+        "translation": "Me retraso..."
+    },
+    {
+        "verb": "sich vorberaite",
+        "prepositions": [
+            "auf"
+        ],
+        "example": "Ich bereite mich auf die Prüfung vor.",
+        "translation": "Me preparo..."
+    },
+    {
+        "verb": "sprechen",
+        "prepositions": [
+            "über",
+            "mit"
+        ],
+        "example": "Maria spricht mit ihrem Chef über das neue Projekt.",
+        "translation": "Hablar"
+    },
+    {
+        "verb": "stinken",
+        "prepositions": [
+            "nach"
+        ],
+        "example": "Der Müll stinkt nach Fisch.",
+        "translation": "Apestar a"
+    },
+    {
+        "verb": "studieren",
+        "prepositions": [
+            "an"
+        ],
+        "example": "Sie studiert Medizin an der Universität.",
+        "translation": "Estudiar"
+    },
+    {
+        "verb": "suchen",
+        "prepositions": [
+            "nach"
+        ],
+        "example": "Sie sucht nach ihrem Schlüssel.",
+        "translation": "Buscar"
+    },
+    {
+        "verb": "tailnehmmen",
+        "prepositions": [
+            "an"
+        ],
+        "example": "Ich nehme an dem Kurs teil.",
+        "translation": "Participar"
+    },
+    {
+        "verb": "telefonieren",
+        "prepositions": [
+            "mit"
+        ],
+        "example": "Ich telefoniere mit meiner Mutter jeden Sonntag.",
+        "translation": "Telefonear"
+    },
+    {
+        "verb": "treumen",
+        "prepositions": [
+            "von"
+        ],
+        "example": "Sie träumt von einer Reise nach Japan.",
+        "translation": "Soñar"
+    },
+    {
+        "verb": "verabschieden",
+        "prepositions": [
+            "von"
+        ],
+        "example": "Er verabschiedet sich von seinen Eltern.",
+        "translation": "despedir"
+    },
+    {
+        "verb": "warter",
+        "prepositions": [
+            "auf"
+        ],
+        "example": "Ich warte auf den Bus.",
+        "translation": "Esperar"
+    }
+];
+export default questions;
